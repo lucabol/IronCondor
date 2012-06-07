@@ -1,6 +1,7 @@
 ﻿<ResourceDictionary
   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:System="clr-namespace:System;assembly=mscorlib"        
   >
     <!--<ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="/ControlTemplateExamples;component/Resources\Shared.xaml" />
@@ -57,5 +58,20 @@
         <Setter Property="Foreground" Value="White" />
         <Setter Property="FontWeight" Value="SemiBold" />
     </Style>
+    <!--<Style TargetType="{x:Type DataGrid}">
+        <Setter Property="Background" Value="#FFF" />
+        <Setter Property="AlternationCount" Value="2" />
+    </Style>
+    <Style TargetType="{x:Type DataGridRow}">
+        <Style.Triggers>
+            <Trigger Property="ItemsControl.AlternationIndex" Value="0">
+                <Setter Property="Background" Value="#CCC"></Setter>
+            </Trigger>
+            <Trigger Property="ItemsControl.AlternationIndex" Value="1">
+                <Setter Property="Background" Value="#EEE"></Setter>
+            </Trigger>
+        </Style.Triggers>
+    </Style>-->
+
 </ResourceDictionary>
 

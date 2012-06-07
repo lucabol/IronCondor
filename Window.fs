@@ -27,7 +27,8 @@ module window =
         window.MainWindow.DataContext <- vm
 
         // Hooking up events
-        window.NextDay.Click.Add (fun _ -> vm.NextDay ())
+        window.NextDay.Click.Add (fun _ -> vm.NextDay 1.)
+        window.PrevDay.Click.Add (fun _ -> vm.NextDay -1.)
         window.Calls.SelectionChanged.Add(fun _ -> vm.SelectedOptions <- window.Calls.SelectedItems) 
         window.Puts.SelectionChanged.Add(fun _ -> vm.SelectedOptions <- window.Puts.SelectedItems) 
         window.StageOptions.Click.Add(fun _ -> vm.StageOptions ())

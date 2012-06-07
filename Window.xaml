@@ -3,6 +3,7 @@
         xmlns:oxy="clr-namespace:OxyPlot.Wpf;assembly=OxyPlot.Wpf"
         Title="IronCondor" Name="MainWindow"
         WindowState="Maximized"
+        xml:lang="en-GB" 
         >
     
     <Window.Resources>
@@ -10,7 +11,7 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="/ReuxablesLegacy;component/metal.xaml" />
                 <ResourceDictionary Source="IronCondorTemplate.xaml"/>
-                <ResourceDictionary Source="/DataGridThemes;component/ExpressionDark.xaml" />
+                <!--<ResourceDictionary Source="/DataGridThemes;component/ExpressionDark.xaml" />-->
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
@@ -44,14 +45,15 @@
             <TextBlock>10</TextBlock>
             <Label>Distance</Label>
             <TextBlock>124</TextBlock>
+            <Button Name="prevDay">Prev Day</Button>
             <Button Name="nextDay">Next Day</Button>
         </StackPanel>
         <TabControl Grid.Row="2">
             <TabItem Header="Calls">
-                <DataGrid Name="calls" ItemsSource="{Binding Calls}" AutoGenerateColumns="true" />
+                <DataGrid Name="calls" IsReadOnly="true" ItemsSource="{Binding Calls}" AutoGenerateColumns="true" />
             </TabItem>
             <TabItem Header="Puts">
-                <DataGrid Name="puts" ItemsSource="{Binding Puts}" AutoGenerateColumns="true" />
+                <DataGrid Name="puts"  IsReadOnly="true" ItemsSource="{Binding Puts}" AutoGenerateColumns="true" />
             </TabItem>
         </TabControl>
         <StackPanel Orientation="Vertical" Grid.Row="4">
